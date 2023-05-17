@@ -24,21 +24,21 @@ namespace ariel
 
     TEST_CASE("Ninja sub classes - without hitpoints")
     {
-        // YoungNinja young("yoad" , Point());
-        // TrainedNinja trained("yoad" , Point());
-        // OldNinja old("yoad" , Point());
+        YoungNinja young("yoad" , Point());
+        TrainedNinja trained("yoad" , Point());
+        OldNinja old("yoad" , Point());
 
-        // CHECK(young.isAlive());
-        // CHECK(young.distance(&trained) == 0.0);
-        // CHECK(young.getLocation().distance(trained.getLocation()) == 0.0);
+        CHECK(young.isAlive());
+        CHECK(young.distance(&trained) == 0.0);
+        CHECK(young.getLocation().distance(trained.getLocation()) == 0.0);
 
-        // CHECK(trained.isAlive());
-        // CHECK(trained.distance(&old) == 0.0);
-        // CHECK(old.getLocation().distance(old.getLocation()) == 0.0);
+        CHECK(trained.isAlive());
+        CHECK(trained.distance(&old) == 0.0);
+        CHECK(old.getLocation().distance(old.getLocation()) == 0.0);
 
-        // CHECK(old.isAlive());
-        // CHECK(old.distance(&young) == 0.0);
-        // CHECK(old.getLocation().distance(young.getLocation()) == 0.0);
+        CHECK(old.isAlive());
+        CHECK(old.distance(&young) == 0.0);
+        CHECK(old.getLocation().distance(young.getLocation()) == 0.0);
     }
 
     TEST_CASE("Cowboy")
